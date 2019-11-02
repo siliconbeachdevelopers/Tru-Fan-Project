@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+  }
+  .html {
+
+    max-height:  300vh;
+    background:  white;
+}
+  body {
+    margin: 0;
+    font-family: Arial;
+    background:white;
+    color:black;
+  }
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+  
+  
+   
+  
+  
+  /* Create four equal columns that sits next to each other */
+  
+    
+
+
+    .header {
+      background: black;
+      box-shadow: 0px 0px 2px #888888;
+      border: 20px  solid  white;
+      display: flex;
+      height:240px;
+      padding: 60px;
+      text-align: center;
+      color: white;
+     
+    }
+    .trufan{
+      font-family: 'Russo One', sans-serif;
+      font-size: 50px;
+      margin-left: 175px;
+      }
+  
+    #stadium1{
+      position: absolute;
+      left:2px;
+      top:2px;
+      padding-top:60px;
+       
+      }
+      .social{
+        position: relative;
+        font-size:18px;
+        left: -171px;
+        bottom:-47px;
+      }
+    .submit{
+        background-color:black;
+        color:black;
+        margin-left:620px;
+        width:400px;
+    }
+    .submit1{
+        background:black;
+        color:white;
+        margin-left:162px;
+        margin-top:2rem;
+        
+    }
+    h6{
+        display: flex;
+        justify-content: center;
+        font-size:18px;
+        font-weight: bold;
+    }
+    /* The container must be positioned relative: */
+    
+    .input-group-addon1{
+      font-size: 18px;
+      color:white;
+    
+    }
+    .form-group{
+      font-size: 18px;
+      color:white;
+    }
+    .col-xs-2{
+      font-size: 18px;
+      color:white;
+    }
+    .imageup{
+      font-size: 18px;
+      color:white;
+    }
+    .containersignin{
+     color:black;
+    }
+    .btn-primary{
+      background:black;
+      color:white;
+      margin-left:50px; 
+    }
+    .signin{
+      margin-left:600px;
+      color:white;
+    }
+    

@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="/css/style2.css"> -->
+
+  </head>
+     <body>
+       <%- include('../partials/navbar.ejs') %>
+          
+  <div class="header">
+    <h1 class="trufan">Tru Fan</h1>    
+    <img id="stadium1" src="/img/stadium.jpeg" alt="">
+
+    </div>
+          
+
+<div class="flex-container">
+      <div class=div1 style="flex-grow: 1">
+          <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <br>
+          <h4 class="w3-center"><br><%=user.fullName%></h4>
+         <p class="w3-center"><img src=<%=user.image%> class="w3-circle" alt=""></p>
+         <hr>
+         
+         <p>Sport:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.sport%></p>
+         <p>Team:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.team%></p>
+         <p>Fan Since:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.fanSince%></p>
+         <p>City:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.city%></p>
+         <p>Interests:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.favoritePlayer%></p>
+         <p>Field:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.profession%></p>
+        </div>
+      </div>
+      <br>
+    
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Squads</button>
+          <div id="Demo1" class="w3-hide w3-container">
+            <p>Some text..</p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a href="/users/index">Search</a></button>
+          <div id="Demo2" class="w3-hide w3-container">
+            <p>Some other text..</p>
+          </div>
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
+          <div id="Demo3" class="w3-hide w3-container">
+         <div class="w3-row-padding">
+         <br>
+           
+         </div>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests: <%=user.interests%></p>
+          <p>Feild: <%=user.profession%></p>
+          
+            
+            
+            <span class="w3-tag w3-small w3-theme-d3">Lakers</span>
+            <span class="w3-tag w3-small w3-theme-d2">Dodgers</span>
+            <span class="w3-tag w3-small w3-theme-d1">Clippers</span>
+            <span class="w3-tag w3-small w3-theme">Rams</span>
+            <span class="w3-tag w3-small w3-theme-l1">USC</span>
+            
+          </p>
+        </div>
+      </div>
+      <br>
+    
+      <section>
+        <div class="message" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              
+          
+              <label for="msg"><b>Message</b></label>
+              <textarea placeholder="Type message.." name="msg" required></textarea>
+          
+              <button type="submit" class="btn">Send</button>
+              <button type="button" class="btn cancel" onclick="closeForm()"></button>
+            </form>
+          </div>
+      </form>
+    </section>
+        
+</div>
+  
+    <div class=div2 style="flex-grow: 1">Squads
+          <div class="card" style="width: 18rem;">
+             <div class="card-body">
+               <%if(allUsers) {%>
+                <% for(let i = 0; i < allUsers.length; i++){ %>
+                  <a href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
+                    <img src="<%=allUsers[i].image%>" class="mr-3" alt..>
+                   <p class="card-text"><%=allUsers[i].city%></p>
+                   <a href="/users/<%=allUsers[i]._id%>/show"class="btn btn-primary">Like</a>
+                   <% } %>
+                   <%}%>
+               </div>
+             </div>
+         </div>
+         
+   
+<div class=div3 style="flex-grow: 8">
+    <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <img src="<img src=<%=user.image%>  " alt="" class="w3-left w3-circle w3-margin-right" style="width:60px">
+          <span class="w3-right w3-opacity"></span>
+        <p>Posts</p>
+          <img src=<%=team.image%> />
+          <% for(let i = 1; i < team.length; i++){ %>
+          <img src="<%=team[i].image%>" style="width:200%," class="w3-margin-bottom">
+          <% } %>
+        
+        <hr class="w3-clear">
+        
+        
+         
+        
+          
+          <div class="post">
+          <p><%=user.bio%></p>
+        </div>
+          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div> 
+    </div>  
+
+</div>
+
+          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        </div> 
+    </div>  
+
+</div>
+<!-- <form method="POST" action='/teams'>
+<div class="form-group">
+<div class="imageup">Submit Photos
+    <input type="text" class="imageups" name="image" placeholder="Link to URL for image here">
+  <button type="submit" class="submit1">submit</button>
+  </div>  
+</form> -->
+    
+          
+        
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*<a href="/users/<%=user._id%>/edit">Edit</a>
+     
+
+
+
+
+

@@ -1,0 +1,127 @@
+
+    
+.html {
+
+    max-height: 300vh;
+    background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+}
+body {
+  background: linear-gradient(90deg,black, aqua);
+
+}
+
+.flex-container {
+    
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+  }
+  
+  .flex-container > div {
+    background-color: white;
+    border-left:#FFFFFF 2px solid;
+    box-shadow: 0px 0px 10px #888888;
+    color: white;
+    width: 275px;
+    height:300vh;
+    margin:30px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  .div1{
+    flex-grow: 1  
+  }
+  .div2{
+    flex-grow: 1  
+  }
+  .div3{
+    flex-grow: 8 
+    
+  }
+  .header {
+    background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+     box-shadow: 0px 0px 2px #888888;
+    border: 20px  solid  white;
+    height:300px;
+    display: flex;
+    align-items: stretch;  
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-right:24px;
+    margin-left: 24px;}
+
+  h1{
+    font-size: 50px;
+    text-align:center;
+  }
+  .card{
+    font-size:20px;
+    color:black;
+  }
+  
+  
+
+.linkname {
+   color:black;
+    font-size: 2em;
+    background-color:black;
+}
+
+.media {
+     color: black;
+     width: 300px;
+ }
+ .bio{
+    color: black;
+    width: 300px;
+ }
+    
+
+
+.name-form{
+    width: 400px;
+   }
+
+
+.city-form{
+ width: 400px;
+}
+
+.age-form{
+    width: 400px;
+   }
+
+.profession-form{
+    width: 400px;
+   }
+   li {
+    color: black;
+    font-size:24;
+    float:left;
+    display: block;
+}
+
+.bioshow{width: 400px;font-weight: 400;}
+.space{height: 50px;}
+.imageups{width: 400px;}
+   
+
+  .flex-container1{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    display: inline-block;
+
+   }
+.logo{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+
+}
+

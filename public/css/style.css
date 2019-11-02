@@ -1,0 +1,245 @@
+
+  
+.html {
+
+    max-height: 500vh;
+    background:  white;
+}
+html, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif;}
+
+body {
+  background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+  }
+
+.flex-container {
+    
+    display: flex;
+    align-items: stretch;
+    background:  white;
+    height: 500rem;
+    
+  }
+  
+  .flex-container > div {
+    background-color: white;
+    border-left:#FFFFFF 2px solid;
+    box-shadow: 0px 0px 10px #888888;
+    color:black;
+    width: 339px;
+    height:400vh;
+    margin:30px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+  }
+  .div1{
+    flex-grow: 1;  
+    width:325px;
+    height: 500rem;
+  }
+  .div2{
+    flex-grow: 1; 
+    width:400px;
+    color:black;
+    height:500rem;
+   
+    
+  }
+  .div3{
+    flex-grow: 8; 
+    background-size ;
+
+
+    
+  }
+  .header {
+    background:black;
+     box-shadow: 0px 0px 2px #888888;
+    border: 20px  solid  white;
+    display: flex;
+    height:275px;
+    padding: 60px;
+    text-align: center;
+    color: white;
+   
+
+    
+  }
+  .trufan{
+   font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    margin-left: 175px;
+    
+   
+   
+  
+  }
+    #stadium1{
+     position: absolute;
+      left:2px;
+      top:73px;
+      padding-top:71  px;
+     
+    }
+
+      
+  .card-title{
+    color: black; 
+  
+   }
+   .btn{
+     background: black;
+     color:white; 
+    }
+     .btn-primary{
+      background: black;
+     }
+   
+  .w3-button{
+    background: black;
+
+}
+    
+    
+  
+  .card{
+    font-size:20px;
+    color:black;
+    margin-left: 50px;
+    width:275px;
+}
+.card-text{
+  font-size:20px;
+  color:black;
+  line-height: 30px;
+  ;
+  
+
+}
+  
+  
+
+.linkname {
+   color:white;
+    font-size: 1em;
+    background-color:black;
+}
+
+.media1 {
+     color: black;
+     display: inline-block;
+    line-height: 75px;
+    font-size: 20px;
+
+     
+     
+ }
+ .bio{
+    color: black;
+    width: 300px;
+ }
+    
+
+
+.name-form{
+    width: 400px;
+   }
+
+
+.city-form{
+ width: 400px;
+}
+
+.age-form{
+    width: 400px;
+   }
+
+.profession-form{
+    width: 400px;
+   }
+   li {
+    color: black;
+    font-size:24;
+    float:left;
+    display: block;
+}
+
+.bioshow{width: 400px;font-weight: 400;}
+.space{height: 50px;}
+.imageups{width: 400px;}
+   
+
+   
+
+
+
+
+.flex-containerhome {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.img-fluid{
+  max-width: 100%;
+  height: 100px;
+  width:100px
+}
+
+.w3-half{
+  width:100%
+
+}
+.w3-theme-l1{
+  background: linear-gradient(90deg,#FFFFFF,);
+}
+.w3-center{
+  background: linear-gradient(90deg, #FFFFFF);
+  box-shadow: 0px 0px 10px #888888;
+  font-size:20px;
+  font-weight:bold;
+}
+.w3-tag{
+  background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+}
+p {
+  background: linear-gradient(90deg, #FFFFFF);
+   box-shadow: 0px 0px 10px #888888;
+}
+.w3-small{
+  background: white;
+}
+h4{
+  background: linear-gradient(90deg, #FFFFFF);
+  /* box-shadow: 0px 0px 10px #888888; */
+  height:5em;
+}
+.post{
+line-height: 1.5em;
+ 
+}
+  
+ 
+
+.w3-{
+  background: linear-gradient(90deg,#FFEFBA, #FFFFFF);
+  box-shadow: 0px 0px 10px #888888;
+
+}
+.picframe{
+  color:white;
+  font-size:18; ;
+}
+
+h8{
+position: relative;
+bottom:-56px;
+left:-165px;
+}
+.w3-center{
+  width:100%;
+}
+.card-body{
+  width:100%;
+}
+
