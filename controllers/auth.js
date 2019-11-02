@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
         req.session.userId = foundUser._id
         console.log(foundUser._id, "<----------------------------id")
         res.redirect('/users/show.ejs');
-        
+
 
       } else {
         // if the passwords don't match 

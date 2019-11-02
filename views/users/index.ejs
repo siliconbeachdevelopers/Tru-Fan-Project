@@ -3,19 +3,20 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <link rel="stylesheet" href="/css/style2.css"> -->
 
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="/css/style2.css"> -->
+
+</head>
 <div class="header">
 
   <h1 class="trufan">Tru Fan</h1><br>
@@ -26,55 +27,53 @@
 
 <div class="flex-container">
   <div class=div1 style="flex-grow: 1">
-  <div class="card" style="width: 18rem;">
-      
-    <div class="picframe"><br>
+    <div class="card" style="width: 18rem;">
+
+      <div class="picframe"><br>
         <% for(let i = 0; i < users.length; i++){ %>
         <h5 class="linkname"><a href="/users/<%=users[i]._id%>"><%=users[i].fullName%></a></h5>
-      
+
         <div class="media-body"></div>
         <a href="/users/<%=users[i]._id%>"></a>
         <img src="<%=users[i].image%>" class="mr-3" alt..>
         <div class="space"></div>
         <% } %>
-     <div class="card-body"></div>
-      <h5 class="card-title"><%=users.fullName%></h5>
-      <p class="card-text"><%=users.city%></p>
-      <a href="#" class="btn btn-primary">Like</a>
+        <div class="card-body"></div>
+        <h5 class="card-title"><%=users.fullName%></h5>
+        <p class="card-text"><%=users.city%></p>
+        <a href="#" class="btn btn-primary">Like</a>
       </div>
+    </div>
+
   </div>
-      
-</div>
-  
- 
-      
-
-
-
-     
 
 
 
 
 
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-      </script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-      </script>
 
 
 
 
-</body>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 
 
 
-      </html>
+  </body>
 
 
+
+
+</html>

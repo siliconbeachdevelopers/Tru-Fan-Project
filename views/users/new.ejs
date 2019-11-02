@@ -1,16 +1,14 @@
-
-
-
 <%- include('../partials/header.ejs') %>
-    
+
 
 
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,109 +16,119 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Create a Profile</title>
 </head>
-<body> 
- 
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="/auth/login">login</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <a href="/auth/login"></a>
-    
-    
-    
-<div class="header">
-    
-  <h1 class="trufan">Tru Fan</h1><br><div class="social">Sports Social Media</div>   
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="/auth/login">login</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <a href="/auth/login"></a>
+
+
+
+  <div class="header">
+
+    <h1 class="trufan">Tru Fan</h1><br>
+    <div class="social">Sports Social Media</div>
     <img id="stadium1" src="/img/stadium.jpeg" alt="">
-</div>
+  </div>
 
 
-<br><h6>Create Your Fan Profile</h6>
+  <br>
+  <h6>Create Your Fan Profile</h6>
 
-<form  class="submit" action="/users" method="POST">
-<div class="name-form">
-          <span class="input-group-addon1">Full Name</span>
-          <input id="fullname" type="text" class="form-control" name="fullName" placeholder="Your Full Name">
+  <form class="submit" action="/users" method="POST">
+    <div class="name-form">
+      <span class="input-group-addon1">Full Name</span>
+      <input id="fullname" type="text" class="form-control" name="fullName" placeholder="Your Full Name">
+    </div>
+
+
+    <div class="city-form">
+      <span class="input-group-addon">City</span>
+      <label for="exampleFormControlSelect2">City</label>
+      <input id="city" type="text" class="form-control" name="city" placeholder="Your City">
+    </div>
+
+    <div class="profession-form">
+      <div class="col-xs-2"></div>
+      <label for="ex2">Profession</label>
+      <input id="profession" type="text" class="form-control" name="profession" placeholder="Your Profession">
+    </div>
+
+    <div class="Interests-form">
+      <div class="col-xs-2">
+        <label for="ex3">Interests</label>
+        <input id="interests" type="text" class="form-control" name="interests" placeholder="Your interests">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Team</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2" name='team'>
+          <option>Los Angeles Lakers</option>
+          <option>Los Angeles Clippers</option>
+          <option>Golden State Warriors</option>
+          <option>New York Knicks</option>
+          <option>Sacramento Kings</option>
+          <option>San Antonio Spurs</option>
+          <option>Boston Celtics</option>
+          <option>Houston Rockets</option>
+          <option>Miami Heat</option>
+          <option>Milwakee Bucks</option>
+        </select>
+      </div>
+      <div class="bio-form">
+        <span class="input-group-addon">Fan Bio</span>
+        <div class="col-xs-2">
+          <label for="ex3">Fan Bio</label>
+          <input id="bio" type="text" class="form-control" name="bio" placeholder="Fan Bio">
         </div>
-  
-  
-        <div class="city-form">
-          <span class="input-group-addon">City</span>
-          <label for="exampleFormControlSelect2">City</label>
-          <input id="city" type="text" class="form-control" name="city" placeholder="Your City">
-        </div>
-       
-                  <div class="profession-form">
-                      <div class="col-xs-2"></div>
-                    <label for="ex2">Profession</label>
-                      <input id="profession" type="text" class="form-control" name="profession" placeholder="Your Profession">
-                      </div>
-                      
-                <div class="Interests-form">
-                    <div class="col-xs-2">
-                  <label for="ex3">Interests</label>
-                    <input id="interests" type="text" class="form-control" name="interests" placeholder="Your interests">
-                    </div>  
+      </div>
+      <br>
 
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect2">Team</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2" name='team'>
-                          <option>Los Angeles Lakers</option>
-                          <option>Los Angeles Clippers</option>
-                          <option>Golden State Warriors</option>
-                          <option>New York Knicks</option>
-                          <option>Sacramento Kings</option>
-                          <option>San Antonio Spurs</option>
-                          <option>Boston Celtics</option>
-                          <option>Houston Rockets</option>
-                          <option>Miami Heat</option>
-                          <option>Milwakee Bucks</option>
-                        </select>
-                      </div>
-                      <div class="bio-form">
-                          <span class="input-group-addon">Fan Bio</span>
-                          <div class="col-xs-2">
-                              <label for="ex3">Fan Bio</label>
-                          <input id="bio" type="text" class="form-control" name="bio" placeholder="Fan Bio">
-                        </div></div>
-                        <br>
-                    
-                    
-                        <br>
-                        
-                        <div class="imageup">Submit Photos
-                        <input type="text" class="imageups" name="image" placeholder="Link to URL for image here">
-                      <button type="submit" class="submit1">submit</button>
-                      </div>  
-                       </form>
-                      
 
-                       <a href="/users">Users Index</a>
-            
-            <br>
+      <br>
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <div class="imageup">Submit Photos
+        <input type="text" class="imageups" name="image" placeholder="Link to URL for image here">
+        <button type="submit" class="submit1">submit</button>
+      </div>
+  </form>
 
-          </body>
+
+  <a href="/users">Users Index</a>
+
+  <br>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+</body>
 
 
 
 
 </html>
-  
 
 
 
@@ -141,12 +149,16 @@
 
 
 
-                
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
 </body>

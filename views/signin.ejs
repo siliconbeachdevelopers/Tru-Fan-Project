@@ -1,6 +1,6 @@
 <div class=div3 style="flex-grow: 8">
-        <div class="media1">
-          <div class="picframe"><br>
+    <div class="media1">
+        <div class="picframe"><br>
             <% for(let i = 0; i < users.length; i++){ %>
             <h5 class="linkname"><a href="/users/<%=users[i]._id%>"><%=users[i].fullName%></a></h5>
             <p class="bio" href="/users/<%=users[i]._id%>"><%=users[i].bio%></p>
@@ -9,8 +9,7 @@
             <img src="<%=users[i].image%>" class="mr-3" alt..>
             <div class="space"></div>
             <% } %>
-          </div>
         </div>
     </div>
-  </div>
-  
+</div>
+</div>

@@ -1,8 +1,8 @@
 const express = require('express');
-const app     = express();
+const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const session        = require('express-session');
+const session = require('express-session');
 // setup the data connection in our main server
 // file, server.js is executed by node, and all files
 
@@ -21,8 +21,10 @@ app.use(session({
 }));
 
 app.use(express.static('public'))
-app.use(methodOverride('_method'));//must come before our routes
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method')); //must come before our routes
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 const authController = require('./controllers/auth')
 app.use('/auth', authController)
@@ -35,10 +37,10 @@ const usersController = require('./controllers/user');
 app.use('/users', usersController);
 
 // home page
-app.get('/',(req, res) => {
+app.get('/', (req, res) => {
   res.render('index.ejs')
 });
 
-app.listen(3020,() => {
-      console.log('server lisenting on port', 3020);
-  });
+app.listen(3020, () => {
+  console.log('server lisenting on port', 3020);
+});

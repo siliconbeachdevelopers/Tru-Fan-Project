@@ -6,7 +6,7 @@ const Team = require('../models/team.js')
 
 router.get('/', (req, res) => {
   User.find({}, (err, allUsers) => {
-    if(err) {
+    if (err) {
       console.log(err)
     } else {
       res.render('users/index.ejs', {
@@ -24,7 +24,7 @@ router.get('/new', (req, res) => {
 
 router.get('/:id/edit', (req, res) => {
   User.findById(req.params.id, (err, foundUser) => {
-    if(err){
+    if (err) {
       res.send(err);
     } else {
       res.render('users/edit.ejs', {
@@ -34,9 +34,11 @@ router.get('/:id/edit', (req, res) => {
   })
 })
 
-router.put('/:id', (req,res) => {
-  User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err,updatedUser) => {
-    if(err){
+router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true
+  }, (err, updatedUser) => {
+    if (err) {
       res.send(err)
     } else {
       res.redirect('/users/' + req.params.id)
@@ -47,31 +49,31 @@ router.put('/:id', (req,res) => {
 
 // show route
 
-  router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const foundUser = await User.findById(req.params.id)
   console.log(foundUser, '<------- THIS IS FOUNDUSER')
   const foundTeams = await Team.find({})
   console.log(foundTeams, '<------- THIS IS FOUNDTEAM')
   const allUsers = await User.find({})
   console.log(allUsers, '<------- THIS IS allUsers')
-try{
-  res.render("users/show.ejs", {
-    user: foundUser,
-    team: foundTeams,
-    allUsers: allUsers || null
-  })
-  
-} catch(err){
-  console.log(err)
-}
+  try {
+    res.render("users/show.ejs", {
+      user: foundUser,
+      team: foundTeams,
+      allUsers: allUsers || null
+    })
+
+  } catch (err) {
+    console.log(err)
+  }
 
 })
 router.delete('/:id', (req, res) => {
   User.findByIdAndRemove(req.params.id, (err, response) => {
-    if(err){
+    if (err) {
       res.send(err);
     } else {
-      res.redirect('/users')// if successful go back to the index
+      res.redirect('/users') // if successful go back to the index
     }
   });
 });
@@ -82,15 +84,17 @@ router.delete('/:id', (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const updatedUser = await User.findByIdAndUpdate(req.session.userId,req.body, {new: true})
+    const updatedUser = await User.findByIdAndUpdate(req.session.userId, req.body, {
+      new: true
+    })
     res.redirect('/teams/new')
-  } catch(err) {
+  } catch (err) {
     console.log(err)
   }
- 
 
-  
-  })
+
+
+})
 
 
 
