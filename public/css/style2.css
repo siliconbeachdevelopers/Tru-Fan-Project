@@ -1,18 +1,21 @@
-*{
-    box-sizing: border-box;
-  }
-  .html {
-
-    max-height:  300vh;
-    background:  white;
+* {
+  box-sizing: border-box;
 }
-  body {
-    margin: 0;
-    font-family: Arial;
-    background:white;
-    color:black;
-  }
-  /* Add a black background color to the top navigation */
+
+.html {
+
+  max-height: 300vh;
+  background: white;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: white;
+  color: black;
+}
+
+/* Add a black background color to the top navigation */
 
 
 /* Style the links inside the navigation bar */
@@ -42,124 +45,120 @@
 /* .topnav .icon {
   display: none;
 } */
-  
-  .row {
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    border: 10px solid black;
-    margin-bottom:50px;
-   
-  
-   
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  
-    .btn1 {
-     
-     background-color: black;
-      border:1px solid black;
-      color: white;
-      padding: 16px 32px;
-      margin-left: 8px;
-      text-align: center;
-      font-size: 16px;
-      margin: 4px 2px;
-      opacity: 1;
-      transition: 0.3s;
-      position:absolute;
-      top:29rem;
-     
 
-    }
-    
-    .btn:hover {opacity: 0.6}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  border: 10px solid black;
+  margin-bottom: 50px;
 
 
 
-    .header {
-      background: black;
-      box-shadow: 0px 0px 2px #888888;
-      border: 20px  solid  white;
-      display: flex;
-      height:240px;
-      padding: 60px;
-      text-align: center;
-      color: white;
-     
-    }
-    .trufan{
-      font-family: 'Russo One', sans-serif;
-      font-size: 50px;
-      margin-left: 175px;
-      }
-  
-    #stadium1{
-      position: absolute;
-      left:2px;
-      top:2px;
-      padding-top:60px;
-       
-      }
+}
 
-    .footer1{
-      position: relative;
-      bottom:-3rem;
-      margin-left: 65rem;
-      font-weight:bold;
-      font-size:17px;
-      line-height: 30px;
-      }
-    
-    .footer2{
-      position: absolute;
-      top:24rem;
-      padding-left: 500px;
-      font-weight:bold;
-      font-size:17px;
-      line-height:30px;
-        }
+/* Create four equal columns that sits next to each other */
 
-    .h2head{
-      font-family: 'Cinzel Decorative', cursive;
-        position: absolute;
-        top:21rem;
-        font-weight:bold;
-        padding-left:5px; 
-        }
+.btn1 {
 
-    .btn2 {
-     
-      background-color: black;
-      border:1px solid black;
-      color: white;
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 16px;
-      margin: 4px 2px;
-      opacity: 1;
-      transition: 0.3s;
-      position:absolute;
-      top:29rem;
-      right:88rem;
-     
-    }
-       
-       .btn2:hover {opacity: 0.6}
-    
-       h4{
-      position: relative;;
-      left: -184px;
-      bottom:-47px;
-    }
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  padding: 16px 32px;
+  margin-left: 8px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  position: absolute;
+  top: 29rem;
 
-  
+
+}
+
+.btn:hover {
+  opacity: 0.6
+}
 
 
 
+.header {
+  background: black;
+  box-shadow: 0px 0px 2px #888888;
+  border: 20px solid white;
+  display: flex;
+  height: 240px;
+  padding: 60px;
+  text-align: center;
+  color: white;
 
+}
 
+.trufan {
+  font-family: 'Russo One', sans-serif;
+  font-size: 50px;
+  margin-left: 175px;
+}
 
+#stadium1 {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  padding-top: 60px;
 
+}
 
+.footer1 {
+  position: relative;
+  bottom: -3rem;
+  margin-left: 65rem;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.footer2 {
+  position: absolute;
+  top: 24rem;
+  padding-left: 500px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.h2head {
+  font-family: 'Cinzel Decorative', cursive;
+  position: absolute;
+  top: 21rem;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.btn2 {
+
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  position: absolute;
+  top: 29rem;
+  right: 88rem;
+
+}
+
+.btn2:hover {
+  opacity: 0.6
+}
+
+h4 {
+  position: relative;
+  ;
+  left: -184px;
+  bottom: -47px;
+}

@@ -87,15 +87,15 @@ router.post('/', async (req, res) => {
   const newUser = await User.findById(req.session.userId);
   const allUsers = await User.find({})
   console.log(newUser, 'this is new user')
-  
-  
+
+
   Team.create(req.body, (err, createdTeam) => {
     if (err) {
       res.send(err);
     } else {
       console.log(createdTeam)
-      
-      
+
+
       User.findById(req.session.userId, (err, foundUser) => {
         if (err) {
           console.log(err)
@@ -105,8 +105,9 @@ router.post('/', async (req, res) => {
             user: foundUser,
             team: createdTeam,
             allUsers: allUsers,
-            
+
           })
+          
         }
       })
 
