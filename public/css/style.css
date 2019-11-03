@@ -1,178 +1,225 @@
-
-  
 .html {
 
-    max-height: 500vh;
-    background:  white;
+  max-height: 500vh;
+  background: white;
 }
-html, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif;}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Open Sans", sans-serif;
+}
 
 body {
-  background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
-  }
+  background: linear-gradient(90deg, black, #0cebeb, #20e3b2, aqua);
+}
 
 .flex-container {
-    
-    display: flex;
-    align-items: stretch;
-    background:  white;
-    height: 500rem;
-    
-  }
-  
-  .flex-container > div {
-    background-color: white;
-    border-left:#FFFFFF 2px solid;
-    box-shadow: 0px 0px 10px #888888;
-    color:black;
-    width: 339px;
-    height:400vh;
-    margin:30px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 16px;
-  }
-  .div1{
-    flex-grow: 1;  
-    width:325px;
-    height: 500rem;
-  }
-  .div2{
-    flex-grow: 1; 
-    width:400px;
-    color:black;
-    height:500rem;
-   
-    
-  }
-  .div3{
-    flex-grow: 8; 
-    background-size ;
 
-
-    
-  }
-  .header {
-    background:black;
-     box-shadow: 0px 0px 2px #888888;
-    border: 20px  solid  white;
-    display: flex;
-    height:275px;
-    padding: 60px;
-    text-align: center;
-    color: white;
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  background: white;
    
 
-    
-  }
-  .trufan{
-   font-family: 'Russo One', sans-serif;
-    font-size: 50px;
-    margin-left: 175px;
-    
-   
-   
-  
-  }
-    #stadium1{
-     position: absolute;
-      left:2px;
-      top:73px;
-      padding-top:71  px;
-     
-    }
-
-      
-  .card-title{
-    color: black; 
-  
-   }
-   .btn{
-     background: black;
-     color:white; 
-    }
-     .btn-primary{
-      background: black;
-     }
-   
-  .w3-button{
-    background: black;
 
 }
-    
-    
-  
-  .card{
-    font-size:20px;
-    color:black;
-    margin-left: 50px;
-    width:275px;
+
+.flex-container>div {
+  background-color: white;
+  border-left: #FFFFFF 2px solid;
+  box-shadow: 0px 0px 10px #888888;
+  color: black;
+  width: 339px;
+  height: 400vh;
+  margin: 30px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 16px;
+
 }
-.card-text{
-  font-size:20px;
-  color:black;
+
+.div1 {
+  flex-grow: 1;
+
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 30px;
+
+}
+
+.div2 {
+  flex-grow: 1;
+  overflow: scroll;
+  width: 400px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+
+
+
+}
+
+.div3 {
+  flex-grow: 8;
+  background-size: contain;
+  overflow: scroll;
+
+
+
+
+
+
+}
+
+.header {
+  background: black;
+  box-shadow: 0px 0px 2px #888888;
+  border: 20px solid white;
+  display: flex;
+  height: 275px;
+  padding: 60px;
+  text-align: center;
+  color: white;
+
+
+
+}
+
+.trufan {
+  font-family: 'Russo One', sans-serif;
+  font-size: 50px;
+  margin-left: 175px;
+
+
+
+
+}
+
+#stadium1 {
+  position: absolute;
+  left: 2px;
+  top: 73px;
+  padding-top: 71 px;
+
+}
+
+
+.card-title {
+  color: black;
+
+}
+
+.btn {
+  background: black;
+  color: white;
+}
+
+.btn-primary {
+  background: black;
+}
+
+.w3-button {
+  background: black;
+
+}
+
+
+
+.card {
+  box-shadow: 0px 0px 3px #888888;
+  font-size: 20px;
+  color: black;
+  margin-left: 50px;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.card-body {
+  box-shadow: 0px 0px 3px #888888;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.card-text {
+  font-size: 20px;
+  color: black;
   line-height: 30px;
-  ;
-  
 
 }
-  
-  
+
+
 
 .linkname {
-   color:white;
-    font-size: 1em;
-    background-color:black;
+  color: white;
+  font-size: 1em;
+  background-color: black;
 }
 
 .media1 {
-     color: black;
-     display: inline-block;
-    line-height: 75px;
-    font-size: 20px;
-
-     
-     
- }
- .bio{
-    color: black;
-    width: 300px;
- }
-    
+  color: black;
+  display: inline-block;
+  line-height: 75px;
+  font-size: 20px;
 
 
-.name-form{
-    width: 400px;
-   }
 
-
-.city-form{
- width: 400px;
 }
 
-.age-form{
-    width: 400px;
-   }
-
-.profession-form{
-    width: 400px;
-   }
-   li {
-    color: black;
-    font-size:24;
-    float:left;
-    display: block;
+.bio {
+  color: black;
+  width: 300px;
 }
 
-.bioshow{width: 400px;font-weight: 400;}
-.space{height: 50px;}
-.imageups{width: 400px;}
-   
+.name-form {
+  width: 400px;
+}
 
-   
+.city-form {
+  width: 400px;
+}
+
+.age-form {
+  width: 400px;
+}
+
+.profession-form {
+  width: 400px;
+}
+
+li {
+  color: black;
+  font-size: 24;
+  float: left;
+  display: block;
+}
+
+.bioshow {
+  width: 400px;
+  font-weight: 400;
+}
+
+.space {
+  height: 50px;
+}
+
+.imageups {
+  width: 400px;
 
 
+}
 
+.imageups1 {
+  width: 600px;
+  height: 35px;
+
+}
 
 .flex-containerhome {
   display: flex;
@@ -180,66 +227,118 @@ body {
   justify-content: center;
   align-items: center;
 }
-.img-fluid{
+
+.img-fluid {
   max-width: 100%;
   height: 100px;
-  width:100px
+  width: 100px
 }
 
-.w3-half{
-  width:100%
+.w3-half {
+  width: 100%
+}
 
+.w3-theme-l1 {
+  background: linear-gradient(90deg, #FFFFFF, );
 }
-.w3-theme-l1{
-  background: linear-gradient(90deg,#FFFFFF,);
-}
-.w3-center{
+
+.w3-center {
   background: linear-gradient(90deg, #FFFFFF);
   box-shadow: 0px 0px 10px #888888;
-  font-size:20px;
-  font-weight:bold;
+  font-size: 25px;
+  font-weight: bolder;
 }
-.w3-tag{
-  background: linear-gradient(90deg,black,#0cebeb, #20e3b2,aqua);
+
+.w3-tag {
+  background: linear-gradient(90deg, black, #0cebeb, #20e3b2, aqua);
 }
+
 p {
   background: linear-gradient(90deg, #FFFFFF);
-   box-shadow: 0px 0px 10px #888888;
+  box-shadow: 0px 0px 10px #888888;
 }
-.w3-small{
+
+.w3-small {
   background: white;
 }
-h4{
+
+h4 {
   background: linear-gradient(90deg, #FFFFFF);
   /* box-shadow: 0px 0px 10px #888888; */
-  height:5em;
+  height: 5em;
 }
-.post{
-line-height: 1.5em;
- 
-}
-  
- 
 
-.w3-{
-  background: linear-gradient(90deg,#FFEFBA, #FFFFFF);
+.post {
+  line-height: 1.5em;
+
+}
+
+
+
+.w3- {
+  background: linear-gradient(90deg, #FFEFBA, #FFFFFF);
   box-shadow: 0px 0px 10px #888888;
 
 }
-.picframe{
-  color:white;
-  font-size:18; ;
+
+.picframe {
+  color: white;
+  font-size: 18;
+  ;
 }
 
-h8{
-position: relative;
-bottom:-56px;
-left:-165px;
-}
-.w3-center{
-  width:100%;
-}
-.card-body{
-  width:100%;
+h8 {
+  position: relative;
+  bottom: -56px;
+  left: -165px;
 }
 
+.w3-center {
+  width: 100%;
+}
+
+
+
+.imagewidth {
+  box-shadow: 0px 0px 3px #888888;
+  max-width: 650px;
+  max-height: 400px;
+}
+
+.imagewidth1 {
+  max-width: 225px;
+  max-height: 225px;
+  box-shadow: 0px 0px 3px #888888;
+}
+
+.imagewidth2 {
+  max-width: 300px;
+  max-height: 225px;
+  box-shadow: 0px 0px 3px #888888;
+}
+
+.submit2 {
+  height: 30px;
+  width: 400px;
+  background: black;
+}
+
+.poststext {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.linkcolor {
+  color: black;
+
+}
+
+.w3btncolor {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 3px #888888;
+}
+
+.colorlink {
+  color: black;
+}

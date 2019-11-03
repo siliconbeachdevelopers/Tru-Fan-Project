@@ -32,17 +32,18 @@
     <div class=div1 style="flex-grow: 1">
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
+       
         <div class="w3-container">
-          <br>
+        
           <h4 class="w3-center"><br><%=user.fullName%></h4>
-          <p class="w3-center"><img src=<%=user.image%> class="w3-circle" alt=""></p>
+          <p class="w3-center"><img src=<%=user.image%> class="imagewidth2" alt=""></p>
           <hr>
 
           <p>Sport:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.sport%></p>
           <p>Team:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.team%></p>
-          <p>Fan Since:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.fanSince%></p>
+          <p>Fan Since:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.since%></p>
           <p>City:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.city%></p>
-          <p>Interests:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.favoritePlayer%></p>
+          <p>MVP:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.player%></p>
           <p>Field:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.profession%></p>
         </div>
       </div>
@@ -51,17 +52,17 @@
       <!-- Accordion -->
       <div class="w3-card w3-round">
         <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3btncolor w3-left-align"><i
               class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Squads</button>
           <div id="Demo1" class="w3-hide w3-container">
             <p>Some text..</p>
           </div>
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-              class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a href="/users/index">Search</a></button>
+          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3btncolor w3-left-align"><i
+              class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a class="colorlink" href="/users/index">Search</a></button>
           <div id="Demo2" class="w3-hide w3-container">
             <p>Some other text..</p>
           </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
+          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3btncolor w3-left-align"><i
               class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
           <div id="Demo3" class="w3-hide w3-container">
             <div class="w3-row-padding">
@@ -94,7 +95,7 @@
 
       <section>
         <div class="message" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form action="/action" class="form-container">
 
 
             <label for="msg"><b>Message</b></label>
@@ -109,15 +110,16 @@
 
     </div>
 
-    <div class=div2 style="flex-grow: 1">Squads
+    <div class=div2><p>Search Profiles</p>
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <%if(allUsers) {%>
           <% for(let i = 0; i < allUsers.length; i++){ %>
-          <a href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
-          <img src="<%=allUsers[i].image%>" class="mr-3" alt..>
-          <p class="card-text"><%=allUsers[i].city%></p>
-          <a href="/users/<%=allUsers[i]._id%>/show" class="btn btn-primary">Like</a>
+            <a class="linkcolor" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
+            <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..><br>
+            <p class="card-text"><%=allUsers[i].city%></p>
+       
           <% } %>
           <%}%>
                </div>
@@ -126,46 +128,64 @@
          
    
 <div class=div3 style="flex-grow: 8">
-    <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+   
+    <div class="poststext"> <p>Posts</p> </div>
+  
+  
+  <div class="w3-container w3-card w3-white w3-round w3-margin">
           <img src="<img src=<%=user.image%> " alt="" class="w3-left w3-circle w3-margin-right" style="width:60px">
           <span class="w3-right w3-opacity"></span>
-          <p>Posts</p>
-          <img src=<%=team.image%> />
+        
+          <img src=<%=team.image%> class="imagewidth" /> 
           <% for(let i = 1; i < team.length; i++){ %>
-          <img src="<%=team[i].image%>" style="width:200%," class="w3-margin-bottom">
+          <img src="<%=team[i].image%>" style="max-width:679px;" class="w3-margin-bottom">
+          
           <% } %>
 
+          
+          
           <hr class="w3-clear">
 
-
-
-
-
-          <div class="post">
+        <div class="post">
             <p><%=user.bio%></p>
           </div>
           <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
              Like</button>
           <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
              Comment</button>
-        </div>
+       
+            <form method="POST" action='/teams'>
+              <div class="form-group"><div class="imageup"></div>
+              
+                  <input type="text" class="imageups1" name="image" placeholder="Link to URL for image here">
+                <button type="submit" class="submit2">submit</button>
+                </div>  
+              </form> 
+       
+       
+          </div>
+        
+      
+      
+      
       </div>
-
+     
+   
+    
     </div>
+    
+   
+  
+    
+  
+  </div>
+  
+  </div>
+   
+ 
 
-    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
-    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
-  </div>
-  </div>
-
-  </div>
-  <!-- <form method="POST" action='/teams'>
-<div class="form-group">
-<div class="imageup">Submit Photos
-    <input type="text" class="imageups" name="image" placeholder="Link to URL for image here">
-  <button type="submit" class="submit1">submit</button>
-  </div>  
-</form> -->
+</div>
+  
 
 
 
