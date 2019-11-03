@@ -10,9 +10,9 @@ currently go to games. Who is your favorite player ect.
 
 It consists of : 
 
-1 Home Page
-1 Login, Sign Up page.
-2 Create Profile Pages.
+1 Home Page,
+1 Login, Sign Up page,
+2 Create Profile Pages,
 1 User Profile Page,
-1 Search Profiles Page.
+1 Search Profiles Page,
 
