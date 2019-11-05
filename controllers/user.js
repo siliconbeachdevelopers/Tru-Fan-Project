@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
 
 router.get('/:id', async (req, res) => {
   console.log("this is the show route")
-  const foundUser = await User.findById(req.params.userId)
+  const foundUser = await User.findById(req.params.id)
   const foundTeams = await Team.find({})
   const allUsers = await User.find({})
   try {
