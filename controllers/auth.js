@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
 
         req.session.loggedIn = true;
         req.session.userId = foundUser._id
-        res.redirect('/users/show.ejs');
+        res.redirect( `/users/show/${foundUser._id}`);
       } else {
         // if the passwords don't match 
         res.redirect('/auth/login');
