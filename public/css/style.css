@@ -216,7 +216,7 @@ li {
 }
 
 .imageups1 {
-  width: 600px;
+  width: 350px;
   height: 35px;
 
 }
@@ -319,7 +319,7 @@ h8 {
 
 .submit2 {
   height: 30px;
-  width: 400px;
+  width: 350px;
   background: black;
 }
 
@@ -341,4 +341,7 @@ h8 {
 
 .colorlink {
   color: black;
+}
+.w3-margin{
+  width:100%;
 }

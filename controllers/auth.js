@@ -8,6 +8,7 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
+  
   try {
     const foundUser = await User.findOne({
       email: req.body.email
@@ -17,10 +18,7 @@ router.post('/login', async (req, res) => {
 
         req.session.loggedIn = true;
         req.session.userId = foundUser._id
-        console.log(foundUser._id, "<----------------------------id")
         res.redirect('/users/show.ejs');
-
-
       } else {
         // if the passwords don't match 
         res.redirect('/auth/login');
@@ -37,8 +35,6 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/registration', async (req, res) => {
-  console.log("hittttttttttttttttttttttt!")
-  console.log(req.body)
   // first thing to do is hash the password
   const password = req.body.password; // the password from the form
   const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10))
@@ -53,7 +49,6 @@ router.post('/registration', async (req, res) => {
 
   // added the user to the db
   const createdUser = await User.create(userDbEntry);
-  console.log(createdUser)
   req.session.username = createdUser.username;
   req.session.userId = createdUser._id
   req.session.logged = true;

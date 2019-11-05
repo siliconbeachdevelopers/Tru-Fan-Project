@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -41,6 +42,6 @@ app.get('/', (req, res) => {
   res.render('index.ejs')
 });
 
-app.listen(3020, () => {
-  console.log('server lisenting on port', 3020);
+app.listen(process.env.PORT, () => {
+  console.log(`server lisenting on ${process.env.PORT}`);
 });

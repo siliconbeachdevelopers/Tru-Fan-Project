@@ -50,12 +50,10 @@ router.put('/:id', (req, res) => {
 // show route
 
 router.get('/:id', async (req, res) => {
-  const foundUser = await User.findById(req.params.id)
-  console.log(foundUser, '<------- THIS IS FOUNDUSER')
+  console.log("this is the show route")
+  const foundUser = await User.findById(req.params.userId)
   const foundTeams = await Team.find({})
-  console.log(foundTeams, '<------- THIS IS FOUNDTEAM')
   const allUsers = await User.find({})
-  console.log(allUsers, '<------- THIS IS allUsers')
   try {
     res.render("users/show.ejs", {
       user: foundUser,

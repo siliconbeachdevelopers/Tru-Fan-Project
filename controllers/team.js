@@ -50,11 +50,9 @@ router.put('/:id', (req, res) => {
 })
 router.get('/:id', async (req, res) => {
   const foundUser = await User.findById(req.session.userId)
-  console.log(foundUser, '<------- THIS IS FOUNDUSER')
   const foundTeam = await Team.findOne({
     'team': foundUser.team
   })
-  console.log(foundTeam, '<------- THIS IS FOUNDTEAM')
   try {
     res.render("users/index.ejs", {
       user: foundUser,
@@ -93,14 +91,10 @@ router.post('/', async (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      console.log(createdTeam)
-
-
       User.findById(req.session.userId, (err, foundUser) => {
         if (err) {
           console.log(err)
         } else {
-          console.log(foundUser, ",----------------------------------------------------------here")
           res.render('users/show.ejs', {
             user: foundUser,
             team: createdTeam,
