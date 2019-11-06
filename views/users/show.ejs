@@ -116,7 +116,9 @@
 
   </form> 
 
-
+  <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete Profile</button>
+  </form>
 
 
 
@@ -234,4 +236,4 @@
 
 
 
-/*<a href="/users/<%=user._id%>/edit">Edit</a>
+

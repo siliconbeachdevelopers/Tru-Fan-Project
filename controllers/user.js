@@ -52,12 +52,12 @@ router.put('/:id', (req, res) => {
 router.get('/:id', async (req, res) => {
   console.log("this is the show route")
   const foundUser = await User.findById(req.params.id)
-  const foundTeams = await Team.find({})
+  const foundTeam = await Team.findOne({'team': foundUser.team})
   const allUsers = await User.find({})
   try {
     res.render("users/show.ejs", {
       user: foundUser,
-      team: foundTeams,
+      team: foundTeam,
       allUsers: allUsers || null
     })
 
@@ -66,14 +66,22 @@ router.get('/:id', async (req, res) => {
   }
 
 })
-router.delete('/:id', (req, res) => {
-  User.findByIdAndRemove(req.params.id, (err, response) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.redirect('/users') // if successful go back to the index
-    }
-  });
+router.delete('/:id', async (req, res) => {
+  try {
+  const deletedUser = await User.findByIdAndRemove(req.params.id)
+  const deletedTeam = await Team.findOneAndRemove({'team': deletedUser.team})
+    res.redirect('/')
+  } catch(err) {
+    console.log(err)
+  }
+  // User.findByIdAndRemove(req.params.id, (err, response) => {
+
+  //   if (err) {
+  //     res.send(err);
+  //   } else {
+  //     res.redirect('/') // if successful go back to the index
+  //   }
+  // });
 });
 
 
@@ -89,9 +97,6 @@ router.post('/', async (req, res) => {
   } catch (err) {
     console.log(err)
   }
-
-
-
 })
 
 
