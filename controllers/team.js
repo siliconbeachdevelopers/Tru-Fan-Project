@@ -37,17 +37,31 @@ router.get('/:id/edit', (req, res) => {
   })
 })
 
-router.put('/:id', (req, res) => {
-  Team.findByIdAndUpdate(req.params.id, req.body, {
-    new: true
-  }, (err, updatedTeam) => {
-    if (err) {
-      res.send(err)
-    } else {
-      res.redirect('/teams/' + req.params.id)
+router.put('/:id', async (req, res) => {
+  try {
+    const edits = {}
+    const updatedTeam = await Team.findByIdAndUpdate(req.params.id, edits, {new: true})
+    const foundUser = await User.findOne({'team': updatedTeam.team})
+    if(req.body.image) {
+      updatedTeam.image.push(req.body.image)
+      updatedTeam.save()
     }
-  })
+    res.redirect(`/users/${foundUser._id}`)
+  } catch(err) {
+    console.log(err)
+  }
+  // Team.findByIdAndUpdate(req.params.id, req.body, {
+  //   new: true
+  // }, (err, updatedTeam) => {
+  //   if (err) {
+  //     res.send(err)
+  //   } else {
+  //     res.redirect('/teams/' + req.params.id)
+  //   }
+  // })
 })
+
+
 router.get('/:id', async (req, res) => {
   const foundUser = await User.findById(req.session.userId)
   const foundTeam = await Team.findOne({
@@ -91,6 +105,7 @@ router.post('/', async (req, res) => {
     if (err) {
       res.send(err);
     } else {
+      // console.log(createdTeam)
       User.findById(req.session.userId, (err, foundUser) => {
         if (err) {
           console.log(err)

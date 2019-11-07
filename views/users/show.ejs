@@ -108,7 +108,7 @@
         </form>
       </section>
       
-      <form method="POST" action='/teams'>
+      <form method="POST" action='/teams/<%=team._id%>?_method=PUT'>
       <div class="form-group"><div class="imageup"></div>
     <input type="text" class="imageups1" name="image" placeholder="Link to URL for image here">
     <button type="submit" class="submit2">submit</button>
@@ -131,7 +131,7 @@
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <%if(allUsers) {%>
-          <% for(let i = 0; i < allUsers.length; i++){ %>
+            <% for(let i = 0; i < allUsers.length; i++){ %>
            
             <a class="linkcolor" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
             <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..><br>
@@ -153,10 +153,9 @@
           <class="w3-left w3-circle w3-margin-right style="width:60px">
           <span class="w3-right w3-opacity"></span>
         
-          <img src=<%=team.image%> class="imagewidth" /> 
-          <% for(let i =  team.length-1; i > 0; i--){ %>
-          <img src="<%=team[i].image%>" style="max-width:700px;" class="w3-margin-bottom">
-          <div class="post">
+          <% for(let i = team.image.length-1; i > 0; i--){ %>
+            <img src="<%=team.image[i]%>" style="max-width:700px;" class="w3-margin-bottom">
+            <div class="post">
          
             <p><%=user.bio%></p>
            
