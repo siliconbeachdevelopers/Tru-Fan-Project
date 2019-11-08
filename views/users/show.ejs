@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="/css/style2.css"> -->
+  
 
 </head>
 
@@ -34,11 +33,13 @@
       <div class="w3-card w3-round w3-white">
 
         <div class="w3-container">
-
-          <h4 class="w3-center"><br><%=user.fullName%></h4>
+          <div class="namehead">
+          <h4 class="w3-center namehead"><br><%=user.fullName%></h4>
+         
+        </div>
           <p class="w3-center"><img src=<%=user.image%> class="imagewidth2" alt=""></p>
-          <hr>
-
+        
+          <div class="text-size">
           <p>Sport:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.sport%></p>
           <p>Team:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.team%></p>
           <p>Fan Since:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=team.since%></p>
@@ -47,7 +48,9 @@
           <p>Field:<i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i><%=user.profession%></p>
         </div>
       </div>
+    </div>
       <br>
+
 
       <!-- Accordion -->
       <div class="w3-card w3-round">
@@ -95,15 +98,17 @@
       <br>
 
       <section>
+          <label for="msg"><b>Message</b></label>
         <div class="message" id="myForm">
           <form action="/action" class="form-container">
 
-
-            <label for="msg"><b>Message</b></label>
-            <textarea placeholder="Type message.." name="msg" required></textarea>
-
             <button type="submit" class="btn">Send</button>
+           
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            
+           
             <button type="button" class="btn cancel" onclick="closeForm()"></button>
+           
           </form>
         </div>
         </form>
@@ -128,16 +133,18 @@
     </div>
 
     <div class=div2>
+      <div class="searchtext">
       <p>Search Profiles</p>
-
+      </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           
           <% for(let i= 0; i < allUsers.length; i++){ %>
             <%if(allUsers) {%>
-          <a class="linkcolor" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
-          <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..><br>
-          <p class="card-text"><%=allUsers[i].city%></p>
+
+          <p><a class="card-text" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
+         <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..>
+          <%=allUsers[i].team%>
 
           <% } %>
           <%}%>
@@ -206,18 +213,7 @@
 
 
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+  
 
 </body>
 
