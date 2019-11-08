@@ -32,9 +32,9 @@
     <div class=div1 style="flex-grow: 1">
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
-       
+
         <div class="w3-container">
-        
+
           <h4 class="w3-center"><br><%=user.fullName%></h4>
           <p class="w3-center"><img src=<%=user.image%> class="imagewidth2" alt=""></p>
           <hr>
@@ -58,7 +58,8 @@
             <p>Some text..</p>
           </div>
           <button onclick="myFunction('Demo2')" class="w3-button w3-block w3btncolor w3-left-align"><i
-              class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a class="colorlink" href="/users/index">Search</a></button>
+              class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a class="colorlink"
+              href="/users/index">Search</a></button>
           <div id="Demo2" class="w3-hide w3-container">
             <p>Some other text..</p>
           </div>
@@ -106,19 +107,19 @@
           </form>
         </div>
         </form>
-      </section>
-      
-      <form method="POST" action='/teams/<%=team._id%>?_method=PUT'>
-      <div class="form-group"><div class="imageup"></div>
-    <input type="text" class="imageups1" name="image" placeholder="Link to URL for image here">
-    <button type="submit" class="submit2">submit</button>
-    </div>  
+      </section><br>
 
-  </form> 
+      <form method="POST" action='/teams/<%=team._id%>?_method=PUT'>Post Photos
+        <div class="form-group">
+          <div class="imageup"></div>
+          <input type="text" class="imageups1" name="image" placeholder='Copy image address only goes here'>
+          <button type="submit" class="submit2">submit</button>
+        </div>
+      </form><br><br>
 
-  <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
-    <button type="submit">Delete Profile</button>
-  </form>
+      <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete Profile</button>
+      </form>
 
 
 
@@ -126,17 +127,18 @@
 
     </div>
 
-    <div class=div2><p>Search Profiles</p>
-      
+    <div class=div2>
+      <p>Search Profiles</p>
+
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <%if(allUsers) {%>
-            <% for(let i = 0; i < allUsers.length; i++){ %>
-           
-            <a class="linkcolor" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
-            <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..><br>
-            <p class="card-text"><%=allUsers[i].city%></p>
-       
+          
+          <% for(let i= 0; i < allUsers.length; i++){ %>
+            <%if(allUsers) {%>
+          <a class="linkcolor" href="/users/<%=allUsers[i]._id%>"><%=allUsers[i].fullName%></a>
+          <img src="<%=allUsers[i].image%>" class="imagewidth1" alt..><br>
+          <p class="card-text"><%=allUsers[i].city%></p>
+
           <% } %>
           <%}%>
                </div>
@@ -154,53 +156,53 @@
           <span class="w3-right w3-opacity"></span>
         
           <% for(let i = team.image.length-1; i > 0; i--){ %>
-            <img src="<%=team.image[i]%>" style="max-width:700px;" class="w3-margin-bottom">
-            <div class="post">
-         
+          <img src="<%=team.image[i]%>" style="max-width:700px;" class="w3-margin-bottom">
+          <div class="post">
+
             <p><%=user.bio%></p>
-           
-          
+
+
           </div>
-            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-               Like</button>
-            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-               Comment</button>
-         
-               
-          
-          
+          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
+             Like</button>
+          <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
+             Comment</button>
+
+
+
+
           <% } %>
 
-          
-          
+
+
           <hr class="w3-clear">
 
-        
-       
-       
-          </div>
-        
-      
-      
-      
-      </div>
-     
-   
-    
-    </div>
-    
-   
-  
-    
-  
-  </div>
-  
-  </div>
-   
- 
 
-</div>
-  
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+  </div>
+
+
+
+  </div>
+
 
 
 
@@ -220,19 +222,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

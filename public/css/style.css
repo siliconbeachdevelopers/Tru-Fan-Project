@@ -247,7 +247,10 @@ li {
   box-shadow: 0px 0px 10px #888888;
   font-size: 25px;
   font-weight: bolder;
+  text-justify: auto;
+
 }
+
 
 .w3-tag {
   background: linear-gradient(90deg, black, #0cebeb, #20e3b2, aqua);
